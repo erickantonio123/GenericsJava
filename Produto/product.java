@@ -1,6 +1,6 @@
-public class product {
+public class product implements Comparable<product>{
     private String nome;
-    private double preco;
+    private Double preco;
 
     public product(String nome, double preco){
         this.nome = nome;
@@ -21,5 +21,10 @@ public class product {
     }
     public String toString(){
         return "Product [nome=" + nome + ", preco=" + preco + "]";
+    }
+
+    @Override
+    public int compareTo(product other) {
+        return preco.compareTo(other.getPreco());
     }   
 }

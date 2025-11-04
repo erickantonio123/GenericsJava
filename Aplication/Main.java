@@ -26,7 +26,7 @@ String fields[] = line.split(",");
 list.add(new product(fields[0], Double.parseDouble(fields[1])));   
         line = br.readLine();
     }
-Integer x = calculationservice.max(list);
+product x = calculationservice.max(list);
 System.out.println("MAX");
 System.out.println(x);
 }catch(Exception e){
@@ -63,8 +63,8 @@ int p = sc.nextInt();
 
 for(int i=0; i<p;i++){
     System.out.println("Digite o elemento");
-    int elemento = sc.nextInt();
-    gen.addElemento(String.valueOf(elemento));
+    
+   
 }
 gen.mostrar();
 System.out.println("Primeiro elemento: " + gen.primeiroElemento());
